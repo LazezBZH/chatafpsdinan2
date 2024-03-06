@@ -1,0 +1,285 @@
+:root {
+  --grey: rgba(187, 198, 206, 1);
+  --grey-low: rgba(187, 198, 206, 0.3);
+  --green: #259d50;
+  --lowgreen: rgba(37, 157, 81, 0.92);
+  --green3: rgb(212, 244, 224);
+  --red-perso: #ce061f;
+}
+
+body {
+  /* overflow: hidden; */
+  background-color: var(--green);
+}
+.container {
+  background-color: var(--green);
+}
+.connexion-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.error-form {
+  position: absolute;
+  top: 0;
+}
+.connexion-container p {
+  margin-bottom: 0;
+}
+.discussion-container,
+.input-group {
+  background-color: whitesmoke;
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+}
+#discussion {
+  height: 50dvh;
+  box-shadow: 0 0 5px var(--grey);
+  overflow-y: scroll;
+}
+
+.saisie {
+  margin-bottom: 1rem;
+}
+header {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding: 0 3rem;
+}
+header h1 {
+  text-transform: uppercase;
+  color: var(--green);
+}
+#news {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  scrollbar-color: var(--green) var(--green3);
+  scrollbar-width: thin;
+}
+/* .mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; 
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+} */
+.one-news {
+  min-width: min(350px, 80dvw);
+  height: 150px;
+  background-color: var(--grey-low);
+  font-size: 1.2rem;
+  padding: 5px;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+  scrollbar-color: var(--red-perso) black;
+  scrollbar-width: thin;
+}
+.one-news p {
+  text-align: left;
+}
+.hello {
+  min-width: 100%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: var(--grey); */
+  /* padding: 4rem 0 1rem 0; */
+  padding-top: 2.5rem;
+  position: relative;
+}
+.hello h2 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  padding: 3px 0;
+}
+.hello-admin,
+.hello-user {
+  width: 95%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--grey);
+  padding: 2rem;
+}
+.green {
+  color: var(--green);
+}
+.grey {
+  color: var(--grey);
+}
+.red {
+  color: var(--red-perso);
+}
+.hello p {
+  margin-bottom: 0;
+}
+.hello-name {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px 10px 10px 10px;
+  border-radius: 20%;
+  text-transform: uppercase;
+}
+.btn-deco,
+.btn-co,
+.btn-cancel {
+  background-color: var(--red-perso);
+  color: whitesmoke;
+  font-weight: bold;
+}
+.btn-co {
+  margin-right: 1rem;
+}
+.btn-add,
+.btn-art {
+  background-color: black;
+  color: whitesmoke;
+}
+.inscription-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 3rem;
+}
+.btn-cancel {
+  position: absolute;
+  top: 3rem;
+  right: 20px;
+}
+.myTooltip {
+  visibility: hidden;
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: -100%;
+  right: 20px;
+  transform: translateY(10%);
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+/* myTooltip  after*/
+.myTooltip::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12.5px 10px 12.5px;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  left: 40%;
+  bottom: 100%;
+}
+
+.reveal-how-to:hover + .myTooltip {
+  visibility: visible;
+  transform: translateY(10%);
+  opacity: 1;
+  transition: 0.3s linear;
+  animation: odsoky 1s ease-in-out 1 forwards;
+}
+@keyframes odsoky {
+  0% {
+    transform: translateY(10%);
+  }
+  20% {
+    transform: translateY(15%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+.btn-insc {
+  background-color: var(--green);
+  color: whitesmoke;
+  font-weight: bold;
+}
+.btn-art {
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bold;
+}
+
+.msg-head {
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+
+.msg-txt {
+  background-color: var(--grey-low);
+  padding: 0.5rem;
+  border-radius: 0 15px 15px 15px;
+  overflow-wrap: break-word;
+}
+.user1 {
+  color: red;
+}
+.user2 {
+  color: purple;
+}
+.user3 {
+  color: blue;
+}
+.user4 {
+  color: green;
+}
+.user5 {
+  color: maroon;
+}
+
+@media screen and (max-width: 800px) {
+  .hello h2 {
+    font-size: 1.5rem;
+  }
+  .hello-admin {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .admin-btn {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .connexion-container {
+    font-size: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .hello {
+    flex-direction: column;
+  }
+  .hello p {
+    margin-bottom: 2rem;
+  }
+}
