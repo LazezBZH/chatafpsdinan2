@@ -1,6 +1,7 @@
 :root {
   --grey: rgba(187, 198, 206, 1);
-  --grey-low: rgba(187, 198, 206, 0.3);
+  --grey-low: rgba(218, 235, 217, 0.4);
+  --grey-lower: rgba(187, 198, 206, 0.3);
   --green: #259d50;
   --lowgreen: rgba(37, 157, 81, 0.92);
   --green3: rgb(212, 244, 224);
@@ -55,41 +56,53 @@ header {
   background-color: black;
   color: whitesmoke;
   text-align: center;
-  padding: 0 3rem;
+  padding: 0;
+}
+h1 {
+  text-transform: uppercase;
 }
 header h1 {
-  text-transform: uppercase;
   color: var(--green);
 }
 #news {
+  width: 95%;
+  max-width: 1204px;
   display: flex;
-  gap: 1rem;
   overflow-x: scroll;
   scrollbar-color: var(--green) var(--green3);
   scrollbar-width: thin;
-}
-/* .mostly-customized-scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaa; 
+  gap: 6px;
+  margin: auto;
 }
 
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
-} */
 .one-news {
-  min-width: min(350px, 80dvw);
+  min-width: 296px;
+  max-width: 296px;
   height: 150px;
-  background-color: var(--grey-low);
-  font-size: 1.2rem;
+  background-color: rgba(245, 245, 245, 0.9);
+  font-size: 1rem;
   padding: 5px;
   overflow-wrap: break-word;
   overflow-y: scroll;
   scrollbar-color: var(--red-perso) black;
   scrollbar-width: thin;
 }
-.one-news p {
+.article-txt {
   text-align: left;
+  color: black;
+}
+.article-title {
+  text-transform: uppercase;
+  color: var(--red-perso);
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.article-date {
+  color: var(--green);
+  text-align: right;
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
 .hello {
   min-width: 100%;
@@ -97,8 +110,6 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* background-color: var(--grey); */
-  /* padding: 4rem 0 1rem 0; */
   padding-top: 2.5rem;
   position: relative;
 }
@@ -144,8 +155,7 @@ header h1 {
   text-transform: uppercase;
 }
 .btn-deco,
-.btn-co,
-.btn-cancel {
+.btn-co {
   background-color: var(--red-perso);
   color: whitesmoke;
   font-weight: bold;
@@ -165,6 +175,7 @@ header h1 {
   padding-top: 3rem;
 }
 .btn-cancel {
+  background-color: var(--grey);
   position: absolute;
   top: 3rem;
   right: 20px;
@@ -233,7 +244,7 @@ header h1 {
 }
 
 .msg-txt {
-  background-color: var(--grey-low);
+  background-color: var(--grey-lower);
   padding: 0.5rem;
   border-radius: 0 15px 15px 15px;
   overflow-wrap: break-word;
@@ -253,6 +264,33 @@ header h1 {
 .user5 {
   color: maroon;
 }
+.user6 {
+  color: red;
+}
+.user7 {
+  color: purple;
+}
+.user8 {
+  color: blue;
+}
+.user4 {
+  color: green;
+}
+.user5 {
+  color: maroon;
+}
+
+@media screen and (max-width: 1220px) {
+  #news {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 920px) {
+  #news {
+    max-width: 600px;
+    gap: 4px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .hello h2 {
@@ -269,7 +307,11 @@ header h1 {
     justify-content: space-evenly;
   }
 }
-
+@media screen and (max-width: 620px) {
+  #news {
+    max-width: 300px;
+  }
+}
 @media screen and (max-width: 500px) {
   .connexion-container {
     font-size: 1rem;

@@ -68,7 +68,7 @@ if(isset($_POST) && !empty($_POST)){
 
 include_once('inc/header.php');
 ?>
-<div class="col-12 my-1">
+<div class="inscription-container col-12 my-1">
     <h1>Connexion</h1>
     <form method="post">
         <div class="form-group">

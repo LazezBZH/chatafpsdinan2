@@ -50,7 +50,7 @@ include_once('inc/header.php');
         <button class="btn btn-art">Enregistrer</button>
      
     </form>
-       <a href="/chatafpsdinan2/admin.php" class="btn btn-cancel">Annuler</a>
+       <a href="/chatafpsdinan2/admin.php" class="btn btn-cancel"> &#x274C;</a>
 </div>
 <?php
 include_once('inc/footer.php');
